@@ -8,8 +8,8 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Install Requirements
 RUN sudo apt-get update
-RUN apt-get install python-pycurl
-RUN pip install docopt feedparser beautifulsoup4
+RUN apt-get install python-pycurl python-bs4
+RUN pip install docopt feedparser
 
 # Volumes and Ports
 VOLUME /config /jd2
