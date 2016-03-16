@@ -9,4 +9,5 @@ chown -R abc:abc /config)
 cd /config
 git pull
 chown -R abc:abc /config
-
+chmod -R 777 /config/db
+chmod -R 777 /config/config
