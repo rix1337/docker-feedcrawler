@@ -8,7 +8,7 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Install Requirements
 RUN sudo apt-get update
-RUN apt-get install pycurl
+RUN apt-get install python-pycurl
 RUN pip install docopt feedparser beautifulsoup4
 
 # Volumes and Ports
