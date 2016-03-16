@@ -7,7 +7,8 @@ ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Install Requirements
-RUN apt-get install -qq --force-yes pycurl
+RUN sudo apt-get update
+RUN apt-get install pycurl
 RUN pip install docopt feedparser beautifulsoup4
 
 # Volumes and Ports
