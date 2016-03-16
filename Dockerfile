@@ -7,7 +7,7 @@ ADD services/ /etc/service/
 RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Install Requirements
-RUN pip install -r https://raw.githubusercontent.com/rix1337/RSScrawler/master/requirements.txt
+RUN pip install docopt feedparser BeautifulSoup pycurl
 
 # Volumes and Ports
 VOLUME /config /jd2
