@@ -1,2 +1,2 @@
 #!/bin/bash
-exec /sbin/setuser abc /usr/bin/python /config/RSScrawler.py --log-level=INFO
+exec /sbin/setuser abc /usr/bin/python /config/RSScrawler.py --log-level=$LOGLEVEL
