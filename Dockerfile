@@ -12,4 +12,4 @@ RUN apt-get install python-pycurl python-beautifulsoup
 RUN pip install docopt feedparser
 
 # Volumes and Ports
-VOLUME /config/Settings /jd2/folderwatch
+VOLUME /config /jd2/folderwatch
