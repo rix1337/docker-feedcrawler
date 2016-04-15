@@ -7,8 +7,6 @@ chown -R abc:abc /config)
 [ "$ADVANCED_DISABLEUPDATES" ] && exit 0
 
 cd /config
-git fetch --all
-git reset --hard origin/master
-git pull origin master
+git pull
 chown -R abc:abc /config
 chmod -R 777 /config/
