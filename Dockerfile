@@ -1,4 +1,4 @@
-FROM linuxserver/baseimage.python
+FROM phusion/baseimage:0.9.18
 MAINTAINER rix1337
 
 #Adding Custom files
@@ -8,7 +8,7 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Install Requirements
 RUN sudo apt-get update
-RUN apt-get install python-pycurl python-beautifulsoup
+RUN apt-get install python2.7 python-pycurl python-beautifulsoup
 RUN pip install docopt feedparser lxml
 
 # Volumes and Ports
