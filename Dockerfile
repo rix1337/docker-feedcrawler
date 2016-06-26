@@ -8,7 +8,7 @@ RUN chmod -v +x /etc/service/*/run /etc/my_init.d/*.sh
 
 # Install Requirements
 RUN sudo apt-get update
-RUN apt-get --yes --force-yes install python2.7 python-pycurl python-beautifulsoup
+RUN apt-get --yes --force-yes install python2.7 python-pip build-essential python-pycurl python-beautifulsoup
 RUN pip install docopt feedparser lxml
 
 # Volumes and Ports
