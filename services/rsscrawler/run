@@ -1,2 +1,6 @@
 #!/bin/bash
-exec /sbin/setuser abc /usr/bin/python /config/RSScrawler.py --jd-pfad=/jd2 --log-level=$LOGLEVEL
+if [ "${LOGLEVEL}" == "" ]; then
+  exec /sbin/setuser abc /usr/bin/python /config/RSScrawler.py --jd-pfad=/jd2 --log-level=$LOGLEVEL
+else
+  exec /sbin/setuser abc /usr/bin/python /config/RSScrawler.py --jd-pfad=/jd2 
+fi
