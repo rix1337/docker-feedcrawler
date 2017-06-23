@@ -2,9 +2,7 @@ FROM lsiobase/alpine.python
 MAINTAINER rix1337
 
 # Install Requirements
-RUN pip install BeautifulSoup docopt feedparser lxml requests cherrypy
-
-# TODO install nodejs for cfscrape!
+RUN pip install BeautifulSoup docopt feedparser requests cherrypy
 
 # add local files
 COPY root/ /
