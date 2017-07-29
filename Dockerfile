@@ -2,7 +2,7 @@ FROM lsiobase/alpine.python
 MAINTAINER rix1337
 
 # Install Requirements
-RUN pip install BeautifulSoup docopt feedparser requests cherrypy
+RUN pip install bs4 docopt feedparser requests cherrypy lxml
 
 # add local files
 COPY root/ /
