@@ -1,5 +1,7 @@
 #!/usr/bin/with-contenv bash
 
-exec \
-	s6-setuidgid abc python /config/RSScrawler.py \
-	--docker "$PARAMETERS"
+if [[ -v LOGLEVEL ]]; then
+  exec s6-setuidgid abc python /config/RSScrawler.py --docker --log-level=$LOGLEVEL $PARAMETER
+else
+  exec s6-setuidgid abc python /config/RSScrawler.py --docker $PARAMETER
+fi
