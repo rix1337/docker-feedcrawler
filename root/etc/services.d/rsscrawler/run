@@ -2,4 +2,4 @@
 
 exec \
 	s6-setuidgid abc python /config/RSScrawler.py \
-	--docker
+	--docker "$PARAMETERS"
