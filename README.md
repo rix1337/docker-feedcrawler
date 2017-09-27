@@ -12,7 +12,8 @@ docker run -d \
   -v /path/to/config/:/config:rw \
   -v /path/to/jdownloader2/:/jd2:rw \
   rix1337/docker-rsscrawler
-  -e PARAMETERS="[--ersatzblogs --log-level=DEBUG --testlauf]"
+  -e LOGLEVEL=[INFO/DEBUG]
+  -e PARAMETER=[--ersatzblogs/--testlauf]
   -e NO_UPDATES
   ```
 Set ```NO_UPDATES``` as environment var to disable updates.
