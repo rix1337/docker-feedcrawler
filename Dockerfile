@@ -2,7 +2,7 @@ FROM lsiobase/alpine.python
 MAINTAINER rix1337
 
 # Install Requirements
-RUN pip install bs4 cfscrape docopt feedparser flask lxml
+RUN pip install bs4 cfscrape docopt feedparser flask lxml requests
 
 # add local files
 COPY root/ /
