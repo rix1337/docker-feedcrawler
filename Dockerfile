@@ -1,7 +1,7 @@
 FROM lsiobase/alpine.python
 MAINTAINER rix1337
 
-RUN apk add --no-cache gcc
+RUN apk add --no-cache gcc python-dev
 
 # Install Requirements
 RUN pip install bs4 cfscrape docopt feedparser gevent flask lxml requests
