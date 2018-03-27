@@ -17,4 +17,4 @@ docker run -d \
   -e BRANCH \
   rix1337/docker-rsscrawler
   ```
-Set ```NO_UPDATES``` to "true" to disable updates.
+Set `NO_UPDATES` to `true` to disable updates.
