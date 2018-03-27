@@ -14,6 +14,7 @@ docker run -d \
   -e LOGLEVEL=[INFO/DEBUG] \
   -e PARAMETER=[--ersatzblogs/--testlauf] \
   -e NO_UPDATES \
+  -e BRANCH \
   rix1337/docker-rsscrawler
   ```
-Set ```NO_UPDATES``` as environment var to disable updates.
+Set ```NO_UPDATES``` to "true" to disable updates.
