@@ -3,7 +3,8 @@
 [[ ! -d /config/.git ]] && (git clone https://github.com/rix1337/RSScrawler.git /config)
 
 # opt out for autoupdates
-if [ "$NO_UPDATES" = true ] ; then
+if [ "$NO_UPDATES" = true ]
+then
     echo "skipping updates!"
     exit 0
 fi
@@ -12,7 +13,13 @@ pip install cfscrape -U
 
 cd /config
 git fetch --all
-git reset --hard origin/$BRANCH
-git pull origin $BRANCH
+if [ ! -z "$BRANCH" ]
+then
+    git reset --hard origin/$BRANCH
+    git pull origin $BRANCH
+else
+    git reset --hard origin/master
+    git pull origin master
+fi
 chown -R abc:abc /config/
 chown -R abc:abc /jd2/folderwatch
