@@ -4,7 +4,7 @@
 
 # opt out for autoupdates
 if [ "$NO_UPDATES" = true ] ; then
-    echo "scip update!"
+    echo "skipping updates!"
     exit 0
 fi
 
