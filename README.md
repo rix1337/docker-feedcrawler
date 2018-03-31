@@ -11,10 +11,11 @@ docker run -d \
   -p port:9090 \
   -v /path/to/config/:/config:rw \
   -v /path/to/jdownloader2/:/jd2:rw \
-  -e LOGLEVEL=[INFO/DEBUG] \
+  -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
   -e PARAMETER=[--ersatzblogs/--testlauf] \
-  -e NO_UPDATES \
-  -e BRANCH \
+  -e NO_UPDATES=[false/true] \
+  -e BRANCH=master \
+  -e REPO=https://github.com/rix1337/RSScrawler.git \
   rix1337/docker-rsscrawler
   ```
 Set `NO_UPDATES` to `true` to disable updates.
