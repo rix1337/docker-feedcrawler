@@ -1,6 +1,11 @@
 #!/usr/bin/with-contenv bash
 
-[[ ! -d /config/.git ]] && (git clone https://github.com/rix1337/RSScrawler.git /config)
+if [ ! -z "$REPO" ]
+then
+    [[ ! -d /config/.git ]] && (git clone $REPO /config)
+else
+    [[ ! -d /config/.git ]] && (git clone https://github.com/rix1337/RSScrawler.git /config)
+fi
 
 # opt out for autoupdates
 if [ "$NO_UPDATES" = true ]
