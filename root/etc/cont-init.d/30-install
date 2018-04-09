@@ -7,6 +7,13 @@ else
     [[ ! -d /config/.git ]] && (git clone https://github.com/rix1337/RSScrawler.git /config)
 fi
 
+# change remote-url if REPO changed
+LOCAL_REPO = git config remote.origin.url
+if [ "$LOCAL_REPO" != "$REPO" ]
+then
+    git remote set-url origin $REPO  
+fi
+
 # opt out for autoupdates
 if [ "$NO_UPDATES" = true ]
 then
