@@ -12,7 +12,7 @@ docker run -d \
   -v /path/to/config/:/config:rw \
   -v /path/to/jdownloader2/:/jd2:rw \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
-  -e PARAMETER=[--ersatzblogs/--testlauf] \
+  -e PARAMETER=[--testlauf] \
   -e NO_UPDATES=[false/true] \
   -e BRANCH=master \
   -e REPO=https://github.com/rix1337/RSScrawler.git \
