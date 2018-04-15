@@ -8,12 +8,12 @@ else
 fi
 
 # change remote-url if REPO changed
-cd /config
-LREPO = git config remote.origin.url
-if [ "$LREPO" != "$REPO" ]
-then
-    git remote set-url origin $REPO  
-fi
+#cd /config
+#LREPO = git config remote.origin.url
+#if [ "$LREPO" != "$REPO" ]
+#then
+#    git remote set-url origin $REPO  
+#fi
 
 # opt out for autoupdates
 if [ "$NO_UPDATES" = true ]
