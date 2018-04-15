@@ -9,8 +9,8 @@ fi
 
 # change remote-url if REPO changed
 cd /config
-LOCAL_REPO = git config remote.origin.url
-if [ "$LOCAL_REPO" != "$REPO" ]
+LREPO = git config remote.origin.url
+if [ "$LREPO" != "$REPO" ]
 then
     git remote set-url origin $REPO  
 fi
