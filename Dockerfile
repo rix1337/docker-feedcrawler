@@ -5,8 +5,8 @@ MAINTAINER rix1337
 RUN apk add --no-cache gcc libc-dev python3-dev
 
 # dependencies
-RUN pip3 install --upgrade pip
-RUN pip3 install bs4 cfscrape docopt feedparser flask future fuzzywuzzy[speedup] gevent lxml python-dateutil requests[socks]
+RUN pip install --upgrade pip
+RUN pip install bs4 cfscrape docopt feedparser flask future fuzzywuzzy[speedup] gevent lxml python-dateutil requests[socks]
 
 # add local files
 COPY root/ /
