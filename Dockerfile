@@ -2,7 +2,7 @@ FROM lsiobase/alpine.python3
 MAINTAINER rix1337
 
 # build tools
-RUN apk add --no-cache gcc libc
+RUN apk add --no-cache gcc libc-dev
 
 # dependencies
 RUN pip install --upgrade pip
