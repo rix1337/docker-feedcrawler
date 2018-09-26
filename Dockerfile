@@ -1,6 +1,8 @@
 FROM lsiobase/alpine.python3
 MAINTAINER rix1337
 
+RUN apk add --no-cache gcc
+
 # Install Requirements
 RUN pip install --upgrade pip
 RUN pip install bs4 cfscrape docopt feedparser flask future fuzzywuzzy[speedup] gevent lxml python-dateutil requests[socks]
