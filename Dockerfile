@@ -1,7 +1,5 @@
-FROM lsiobase/alpine.python
+FROM lsiobase/alpine.python3
 MAINTAINER rix1337
-
-RUN apk add --no-cache gcc libc-dev python-dev
 
 # Install Requirements
 RUN pip install --upgrade pip
