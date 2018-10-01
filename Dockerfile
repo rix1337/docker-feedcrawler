@@ -6,7 +6,7 @@ RUN apk add --no-cache gcc libc-dev python3-dev
 
 # dependencies
 RUN pip install --upgrade pip
-RUN pip install bs4 cfscrape docopt feedparser flask future fuzzywuzzy[speedup] gevent lxml python-dateutil requests[socks]
+RUN pip install bs4 cfscrape docopt feedparser flask future fuzzywuzzy[speedup] gevent lxml python-dateutil requests[socks] six
 
 # add local files
 COPY root/ /
