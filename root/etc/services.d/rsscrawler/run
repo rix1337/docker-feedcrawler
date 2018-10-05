@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 if [[ -v LOGLEVEL ]]; then
-  exec RSScrawler --docker --log-level=$LOGLEVEL $PARAMETER
+  exec rsscrawler --docker --log-level=$LOGLEVEL $PARAMETER
 else
-  exec RSScrawler --docker $PARAMETER
+  exec rsscrawler --docker $PARAMETER
 fi
