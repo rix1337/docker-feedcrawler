@@ -6,10 +6,7 @@ RUN apk add --no-cache gcc libc-dev python3-dev
 
 # dependencies
 RUN pip install --upgrade pip
-RUN pip install bs4 cfscrape docopt feedparser flask fuzzywuzzy[speedup] gevent lxml python-dateutil requests[socks] six
-
-# clean up
-RUN apk del gcc libc-dev python3-dev
+RUN pip install rsscrawler
 
 # add local files
 COPY root/ /
