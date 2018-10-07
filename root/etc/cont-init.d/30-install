@@ -1,6 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-pip install cfscrape -U
 pip install rsscrawler -U
 
 chown -R abc:abc /config/
