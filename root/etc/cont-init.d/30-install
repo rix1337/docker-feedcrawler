@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-pip install rsscrawler -U
+pip install rsscrawler -U -q
 
 chown -R abc:abc /config/
 chown -R abc:abc /jd2/folderwatch
