@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 
-pip install cfscrape -U  &>/dev/null
-pip install rsscrawler -U &>/dev/null
+pip install cfscrape -U
+pip install rsscrawler -U
 
 chown -R abc:abc /config/
 chown -R abc:abc /jd2/folderwatch
