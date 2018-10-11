@@ -1,8 +1,7 @@
 # docker-rsscrawler
 Automating JDownloader Downloads (German!)
 
-Learn more at:
-https://github.com/rix1337/RSScrawler
+Learn more at the [RSScrawler project page](https://github.com/rix1337/RSScrawler).
 
 ```
 docker run -d \
