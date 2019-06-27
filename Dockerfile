@@ -6,7 +6,7 @@ RUN apk add --no-cache gcc libc-dev python3-dev
 
 # dependencies
 RUN pip install --upgrade pip
-RUN pip install python-Levenshtein rsscrawler
+RUN pip install python-Levenshtein rsscrawler --no-cache-dir
 
 # add local files
 COPY root/ /
