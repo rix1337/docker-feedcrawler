@@ -1,7 +1,3 @@
 #!/usr/bin/with-contenv bash
 
-if [[ -v LOGLEVEL ]]; then
-  exec rsscrawler --docker --log-level=$LOGLEVEL $PARAMETER
-else
-  exec rsscrawler --docker $PARAMETER
-fi
+ exec rsscrawler --docker --log-level=$LOGLEVEL --jd-user=$USER --jd-pass=$PASS --jd-device=$DEVICE

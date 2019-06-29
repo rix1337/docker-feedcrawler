@@ -13,16 +13,27 @@ RSScrawler automatisiert bequem das Hinzufügen von Links für den JDownloader.
 [![GitHub stars](https://img.shields.io/github/stars/rix1337/RSScrawler.svg)](https://github.com/rix1337/RSScrawler/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/rix1337/RSScrawler.svg)](https://github.com/rix1337/RSScrawler/network)
 
+# Starten
+
 ```
 docker run -d \
   --name="RSScrawler" \
   -p port:9090 \
   -v /path/to/config/:/config:rw \
-  -e PARAMETER=[--jd-user=<NUTZERNAME> --jd-pass=<PASSWORT> --jd-device=<GERÄTENAME>] \
+  -e USER=NUTZERNAME \ 
+  -e PASS=PASSWORT \
+  -e DEVICE=GERÄTENAME \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
   -v /path/to/jdownloader2/:/jd2:rw \
   rix1337/docker-rsscrawler
   ```
+
+# Optionale Parameter
+ - `-e USER` (ab dem ersten Start, sofern unverändert)
+ - `-e PASS` (ab dem ersten Start, sofern unverändert)
+ - `-e DEVICE` (immer, sofern nur ein Gerät im MyJD-Konto vorhanden ist, sonst ab dem ersten Start, sofern unverändert)
+ - `-e LOGLEVEL` (immer)
+ - `-v  /path/to/jdownloader2/:/jd2:rw` (immer, sofern MyJD-Konto verwendet wird)
 
 # Hinweis
 
