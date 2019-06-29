@@ -18,11 +18,17 @@ docker run -d \
   --name="RSScrawler" \
   -p port:9090 \
   -v /path/to/config/:/config:rw \
-  -e PARAMETER=[--jd-user=<NUTZERNAME> --jd-pass=<PASSWORT> --jd-device=<GERÄTENAME>] \
+  -e USER=NUTZERNAME \ 
+  -e PASS=PASSWORT \
+  -e DEVICE=GERÄTENAME \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
   -v /path/to/jdownloader2/:/jd2:rw \
   rix1337/docker-rsscrawler
   ```
+
+`-e USER` und `-e PASS` sind ab dem ersten Start optional
+
+`-e DEVICE` ist optional, sofern nur ein JDownloader mit dem Konto verbunden ist
 
 # Hinweis
 
