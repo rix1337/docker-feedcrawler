@@ -1,3 +1,20 @@
 #!/usr/bin/with-contenv bash
 
- exec rsscrawler --docker --log-level=$LOGLEVEL --jd-user=$USER --jd-pass=$PASS --jd-device=$DEVICE
+if [[ -v LOGLEVEL ]]; then
+	LOGLEVEL=--log-level=$LOGLEVEL
+fi
+
+if [[ -v USER ]]; then
+	USER=-jd-user=$USER
+fi
+
+if [[ -v PASS ]]; then
+	PASS=--jd-pass=$PASS
+fi
+
+if [[ -v DEVICE ]]; then
+	DEVICE=--log-level=$DEVICE
+fi
+
+ exec rsscrawler --docker $LOGLEVEL $USER $PASS $DEVICE
+
