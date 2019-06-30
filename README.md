@@ -39,4 +39,4 @@ docker run -d \
 
 Weitere Hinweise zur Einrichtung des Containers finden sich [im Wiki](https://github.com/rix1337/RSScrawler/wiki/1.3-Docker).
 
-Wenn keine Zugangsdaten für My JDownloader per `-e PARAMETER` übergeben werden, ist für den erfolgreichen Start zwingend das Volumen `/jd2` mit dem Unterordner `folderwatch` einzurichten. Infos dazu finden sich [im Wiki](https://github.com/rix1337/RSScrawler/wiki/1.-Vorbereitung-im-JDownloader).
+Wenn keine Zugangsdaten für My JDownloader per Parameter übergeben werden, ist für den erfolgreichen Start zwingend das Volumen `/jd2` mit dem Unterordner `folderwatch` einzurichten. Infos dazu finden sich [im Wiki](https://github.com/rix1337/RSScrawler/wiki/1.-Vorbereitung-im-JDownloader).
