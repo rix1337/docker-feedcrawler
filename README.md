@@ -24,7 +24,6 @@ docker run -d \
   -e PASS=PASSWORT \
   -e DEVICE=GERÄTENAME \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
-  -v /path/to/jdownloader2/:/jd2:rw \
   rix1337/docker-rsscrawler
   ```
 
@@ -33,7 +32,6 @@ docker run -d \
  - `-e PASS` (ab dem ersten Start, sofern unverändert)
  - `-e DEVICE` (immer, sofern nur ein Gerät im MyJD-Konto vorhanden ist, sonst ab dem ersten Start, sofern unverändert)
  - `-e LOGLEVEL` (immer)
- - `-v  /path/to/jdownloader2/:/jd2:rw` (immer, sofern MyJD-Konto verwendet wird)
 
 # Hinweis
 
