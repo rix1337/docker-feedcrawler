@@ -35,4 +35,4 @@ docker run -d \
 
 # Hinweis
 
-Weitere Hinweise zur Einrichtung des Containers finden sich [im Wiki](https://github.com/rix1337/RSScrawler/wiki/1.3-Docker).
+Weitere Hinweise zur Einrichtung des Containers finden sich [im Wiki](https://github.com/rix1337/RSScrawler/wiki/1.1-Installation-(Docker)).
