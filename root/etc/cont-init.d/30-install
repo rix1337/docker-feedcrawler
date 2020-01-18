@@ -1,5 +1,6 @@
 #!/usr/bin/with-contenv bash
 
+pip install cloudscraper -U -q
 pip install rsscrawler -U -q
 
 chown -R abc:abc /config/
