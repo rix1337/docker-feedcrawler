@@ -24,6 +24,7 @@ docker run -d \
   -e PASS=PASSWORT \
   -e DEVICE=GERÄTENAME \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
+  --log-opt max-size=50m \
   rix1337/docker-rsscrawler
   ```
 
