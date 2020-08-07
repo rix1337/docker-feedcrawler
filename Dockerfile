@@ -5,7 +5,7 @@ MAINTAINER rix1337
 RUN apk add --no-cache build-base libc-dev libffi-dev python3-dev
 
 # dependencies
-RUN pip install --upgrade pip
+/usr/bin/python3.6 -m pip install --upgrade pip
 RUN pip install rsscrawler --no-cache-dir
 
 # add local files
