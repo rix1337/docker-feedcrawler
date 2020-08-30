@@ -33,6 +33,18 @@ docker run -d \
  - `-e PASS` (ab dem ersten Start, sofern unverändert)
  - `-e DEVICE` (immer, sofern nur ein Gerät im MyJD-Konto vorhanden ist, sonst ab dem ersten Start, sofern unverändert)
  - `-e LOGLEVEL` (immer)
+ 
+#### Hostnamen festlegen
+
+RSScrawler kann zum durchsuchen beliebiger Webseiten verwendet werden. Ausschließlich der Anwender entscheidet, welche Seiten durchsucht werden sollen.
+Diese Entscheidung trifft der Anwender selbstständig, indem er die _RSScrawler.ini_ in der Kategorie _[Hostnames]_ manuell befüllt (_ab = xyz.com_).
+Eingetragen werden dort reine Hostnamen (ohne _https://_).
+
+##### Dabei gilt
+* Welcher Hostname aufgerufen wird entscheidet allein der Anwender.
+* Ist nicht mindestens ein Hostname gesetzt, wird der RSScrawler nicht starten.
+* Passt die aufgerufene Seite hinter dem jeweiligen Hostnamen nicht zum Suchmuster des RSScrawlers, kann es zu Fehlern kommen.
+* Weder RSScrawler noch der Autor benennen oder befürworten spezifische Hostnamen. Fragen hierzu werden kommentarlos geschlossen!
 
 # Hinweis
 
