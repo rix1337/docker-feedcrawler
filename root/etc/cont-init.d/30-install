@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv bash
 
 pip install cloudscraper -U -q
-pip install rsscrawler -U -q
+pip install feedcrawler -U -q
 
 chown -R abc:abc /config/
 chown -R abc:abc /jd2/folderwatch
