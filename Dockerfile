@@ -9,7 +9,7 @@ ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 
 # dependencies
 RUN /usr/bin/python3.6 -m pip install --upgrade pip
-RUN pip install rsscrawler --no-cache-dir
+RUN pip install feedcrawler --no-cache-dir
 
 # add local files
 COPY root/ /

@@ -1,3 +1,0 @@
-#!/usr/bin/with-contenv bash
-
- exec rsscrawler --docker --log-level=$LOGLEVEL --jd-user=$USER --jd-pass=$PASS --jd-device=$DEVICE
