@@ -17,3 +17,10 @@ COPY root/ /
 # volumes and ports
 VOLUME /config /jd2/folderwatch
 EXPOSE 9090
+
+# Set environment variables.
+ENV USER=""
+ENV PASS=""
+ENV DEVICE=""
+ENV LOGLEVEL=""
+ENV VERSION=""

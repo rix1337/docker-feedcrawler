@@ -26,6 +26,7 @@ docker run -d \
   -e PASS=PASSWORT \
   -e DEVICE=GERÄTENAME \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
+  -e VERSION=[X.X.X] \
   --log-opt max-size=50m \
   rix1337/docker-rsscrawler
   ```
@@ -35,6 +36,7 @@ docker run -d \
  - `-e PASS` (ab dem ersten Start, sofern unverändert)
  - `-e DEVICE` (immer, sofern nur ein Gerät im MyJD-Konto vorhanden ist, sonst ab dem ersten Start, sofern unverändert)
  - `-e LOGLEVEL` (immer)
+ - `-e VERSION` (immer, sofern nicht eine spezifische Version aus dem [PyPI-Repository](https://pypi.org/project/feedcrawler/#history) installiert werden soll)
  
 #### Hostnamen festlegen
 
