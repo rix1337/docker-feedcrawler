@@ -38,7 +38,7 @@ docker run -d \
  - `-e LOGLEVEL` (immer)
  - `-e VERSION` (immer, sofern nicht eine spezifische Version aus dem [PyPI-Repository](https://pypi.org/project/feedcrawler/#history) installiert werden soll)
  
-#### Hostnamen festlegen
+# Hostnamen festlegen
 
 FeedCrawler kann zum durchsuchen beliebiger Webseiten verwendet werden. Ausschließlich der Anwender entscheidet, welche Seiten durchsucht werden sollen.
 Diese Entscheidung trifft der Anwender selbstständig, indem er die _FeedCrawler.ini_ in der Kategorie _[Hostnames]_ manuell befüllt (_ab = xyz.com_).
