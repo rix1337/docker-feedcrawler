@@ -6,7 +6,7 @@ if [ -z "$VERSION" ]; then
       pip install feedcrawler -U -q
 else
       pip uninstall -y feedcrawler
-      pip install feedcrawler=="$VERSION" -q
+      pip install feedcrawler=="$VERSION"
 fi
 
 chown -R abc:abc /config/
