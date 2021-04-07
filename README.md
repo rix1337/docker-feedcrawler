@@ -2,7 +2,7 @@
 
 Dies ist das offizielle Docker-Image von FeedCrawler (ehemals RSScrawler).
 
-RSScrawler automatisiert bequem das Hinzufügen von Links für den JDownloader.
+FeedCrawler automatisiert bequem das Hinzufügen von Links für den JDownloader.
 
 [![PyPI version](https://badge.fury.io/py/feedcrawler.svg)](https://badge.fury.io/py/feedcrawler)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/feedcrawler)](https://github.com/rix1337/FeedCrawler/releases)
@@ -28,7 +28,7 @@ docker run -d \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
   -e VERSION=[X.X.X] \
   --log-opt max-size=50m \
-  rix1337/docker-rsscrawler
+  rix1337/docker-feedcrawler
   ```
 
 # Optionale Parameter
