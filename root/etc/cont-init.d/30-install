@@ -1,7 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-pip install cloudscraper -U -q
-
 if [ -z "$VERSION" ]; then
       pip install feedcrawler -U -q
 else
@@ -10,4 +8,3 @@ else
 fi
 
 chown -R abc:abc /config/
-chown -R abc:abc /jd2/folderwatch
