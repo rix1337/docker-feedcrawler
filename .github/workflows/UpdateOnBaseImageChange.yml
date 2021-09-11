@@ -5,7 +5,7 @@ on:
     
 env:
   IMAGE_BASE: lsiobase/alpine.python3
-  IMAGE: docker-ddtofeedcrawler
+  IMAGE: docker-feedcrawler
 
 jobs:
   check-base-image:
