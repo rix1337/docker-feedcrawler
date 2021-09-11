@@ -14,5 +14,5 @@ jobs:
         with:
           username: "${{ secrets.DOCKERUSER }}"
           password: "${{ secrets.DOCKERPASS }}"
-          image_name: ${ENDPOINT}
+          image_name: "${{ env.ENDPOINT }}"
           image_tag: latest
