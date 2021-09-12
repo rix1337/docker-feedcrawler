@@ -9,9 +9,6 @@ RUN /usr/bin/python3.6 -m pip install --upgrade pip \
   && pip install wheel \
   && pip install git+https://github.com/alberanid/imdbpy
   
-# feedcrawler
-RUN pip install feedcrawler --no-cache-dir
-
 # add local files
 COPY root/ /
 
@@ -25,3 +22,9 @@ ENV PASS=""
 ENV DEVICE=""
 ENV LOGLEVEL=""
 ENV VERSION=""
+
+# invalidate build cache on repo commit
+ADD "https://api.github.com/repos/rix1337/FeedCrawler/commits?per_page=1" latest_commit
+
+# feedcrawler
+RUN pip install feedcrawler --no-cache-dir
