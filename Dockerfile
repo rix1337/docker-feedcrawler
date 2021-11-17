@@ -2,7 +2,7 @@ FROM lsiobase/alpine.python3
 MAINTAINER rix1337
 
 # build tools
-RUN apk add --no-cache build-base libc-dev libffi-dev g++ gcc libxslt-dev python3-dev
+RUN apk add --no-cache build-base libc-dev libffi-dev g++ gcc jq libxslt-dev python3-dev
 
 # dependencies
 RUN /usr/bin/python3.6 -m pip install --upgrade pip \
@@ -40,5 +40,7 @@ ADD "https://api.github.com/repos/rix1337/FeedCrawler/commits?per_page=1" latest
 # Install latest IMDbPY if available
 RUN pip install git+https://github.com/alberanid/imdbpy
 
-# Install FeedCrawler
-RUN pip install feedcrawler --no-cache-dir
+# Get current available Feedcrawler version, install that specific version and clean up packages
+RUN VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version) && \
+  pip install feedcrawler=="$VERSION" --no-cache-dir && \
+  apk del build-base libc-dev libffi-dev g++ gcc jq 
