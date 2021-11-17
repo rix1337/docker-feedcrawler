@@ -13,7 +13,6 @@ jobs:
     steps:
       - id: get-version
         run: | 
-          sudo apt-get update && sudo apt-get install jq
           VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version)
           echo $VERSION
           echo "::set-output name=version::$VERSION"
