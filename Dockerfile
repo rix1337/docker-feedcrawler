@@ -45,14 +45,7 @@ ARG VS="false"
 RUN echo "VS: ${VS}"
 
 # Install specific version of FeedCrawler and clean up unneeded packages
-RUN if [[ ${VS} == "false" ]] && \
-  then && \
-    echo "Grabbing latest feedcrawler version from pypi.org" && \
-    VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version) && \
-  else && \
-    echo "Using version from workflow_dispatch input" && \
-    VERSION=$VS && \
-  fi && \
+RUN if [[ ${VS} == "false" ]] ; then ; echo "Grabbing latest feedcrawler version from pypi.org" ; VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version) ; else ; echo "Using version from workflow_dispatch input" ; VERSION=$VS ; fi  && \
   echo $VERSION && \
   pip install feedcrawler=="$VERSION" --no-cache-dir && \
     apk del build-base libc-dev libffi-dev g++ gcc jq 
