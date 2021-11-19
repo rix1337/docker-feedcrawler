@@ -6,7 +6,7 @@ on:
     inputs:
       version:
         default: 'false'
-        required: false
+        required: true
 
 env:
   ENDPOINT: "rix1337/docker-feedcrawler"
