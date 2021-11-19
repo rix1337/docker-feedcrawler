@@ -40,7 +40,17 @@ ADD "https://api.github.com/repos/rix1337/FeedCrawler/commits?per_page=1" latest
 # Install latest IMDbPY if available
 RUN pip install git+https://github.com/alberanid/imdbpy
 
+ARG VS false
+
 # Get current available Feedcrawler version, install that specific version and clean up packages
-RUN VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version) && \
+RUN if [[ $VS == "false" ]] && \
+  then && \
+    echo "Grabbing latest feedcrawler version from pypi.org" && \
+    VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version) && \
+  else && \
+    echo "Using version from workflow_dispatch input" && \
+    VERSION=$VS && \
+  fi && \
+  echo $VERSION && \
   pip install feedcrawler=="$VERSION" --no-cache-dir && \
-  apk del build-base libc-dev libffi-dev g++ gcc jq 
+    apk del build-base libc-dev libffi-dev g++ gcc jq 
