@@ -19,13 +19,14 @@ jobs:
     steps:
       - id: get-version
         run: | 
-          if [[ ${{ github.event.inputs.version }} == "false" ]]
+          if [ -z "${{ github.event.inputs.version }}" ]; then VS="false"; else VS=${{ github.event.inputs.version }}; fi
+          if [[ ${VS} == "false" ]]
           then
             echo "Grabbing latest feedcrawler version from pypi.org"
             VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version)
           else
             echo "Using version from workflow_dispatch input"
-            VERSION=${{ github.event.inputs.version }}
+            VERSION=${VS}
           fi
           echo $VERSION
           echo "::set-output name=version::$VERSION"
@@ -41,4 +42,4 @@ jobs:
           image_name: "${{ env.ENDPOINT }}"
           image_tag: latest,${{needs.version-check.outputs.output}}
           stages_image_name: "rix1337/cache-feedcrawler-latest"
-          
+          build_extra_args: "--build-arg=VS=${{needs.version-check.outputs.output}}"
