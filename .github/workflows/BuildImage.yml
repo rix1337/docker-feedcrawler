@@ -1,6 +1,12 @@
 name: Build Image
 
-on: [push, workflow_dispatch]
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      version:
+        default: 'false'
+        required: false
 
 env:
   ENDPOINT: "rix1337/docker-feedcrawler"
@@ -13,7 +19,14 @@ jobs:
     steps:
       - id: get-version
         run: | 
-          VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version)
+          if [[ ${{ github.event.inputs.version }} == "false" ]]
+          then
+            echo "Grabbing latest feedcrawler version from pypi.org"
+            VERSION=$(curl -Ls https://pypi.org/pypi/feedcrawler/json | jq -r .info.version)
+          else
+            echo "Using version from workflow_dispatch input"
+            VERSION=${{ github.event.inputs.version }}
+          fi
           echo $VERSION
           echo "::set-output name=version::$VERSION"
   build:
