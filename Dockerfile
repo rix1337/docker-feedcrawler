@@ -40,7 +40,8 @@ ADD "https://api.github.com/repos/rix1337/FeedCrawler/commits?per_page=1" latest
 # Install latest IMDbPY if available
 RUN pip install git+https://github.com/alberanid/imdbpy
 
-ARG VS false
+# Optionally set version
+ARG VS="false"
 
 # Get current available Feedcrawler version, install that specific version and clean up packages
 RUN if [[ $VS == "false" ]] && \
