@@ -7,8 +7,9 @@ RUN apk add --no-cache build-base libc-dev libffi-dev g++ gcc jq libxslt-dev pyt
 # dependencies
 RUN /usr/bin/python3.6 -m pip install --upgrade pip \
   && pip install wheel \
-  && pip install git+https://github.com/alberanid/imdbpy \
+  && pip install \
 beautifulsoup4>=4.9.3 \
+cinemagoer>=2022.2.11 \
 docopt>=0.6.2 \
 flask>=2.0.0 \
 passlib>=1.7.4 \
@@ -36,9 +37,6 @@ ENV VERSION=""
 
 # invalidate build cache on repo commit
 ADD "https://api.github.com/repos/rix1337/FeedCrawler/commits?per_page=1" latest_commit
-
-# Install latest IMDbPY if available
-RUN pip install git+https://github.com/alberanid/imdbpy
 
 # Optionally set desired version for the build
 ARG VS="false"
