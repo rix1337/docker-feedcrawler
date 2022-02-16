@@ -6,7 +6,20 @@ RUN apk add --no-cache build-base libc-dev libffi-dev g++ gcc jq libxslt-dev pyt
 
 # dependencies
 RUN /usr/bin/python3.6 -m pip install --upgrade pip \
-  && pip install wheel
+  && pip install wheel \
+  && pip install \
+beautifulsoup4==4.10.0 \
+cinemagoer==2022.2.11 \
+docopt==0.6.2 \
+flask==2.0.3 \
+html5lib==1.1 \
+passlib==1.7.4 \
+pycryptodomex==3.14.1 \
+python-dateutil==2.8.2 \
+rapidfuzz==2.0.2 \
+requests==2.27.1 \
+simplejson==3.17.6 \
+waitress==2.0.0
   
 # add local files
 COPY root/ /
