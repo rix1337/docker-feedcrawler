@@ -45,7 +45,7 @@ jobs:
           image_tag: latest,${{needs.version-check.outputs.output}}
           stages_image_name: "rix1337/cache-feedcrawler-latest"
           build_extra_args: "--build-arg=VS=${{needs.version-check.outputs.output}}"
-      - name: Sleep for 30 seconds before retry
+      - name: Sleep before retry
         if: steps.firstrun.outcome=='failure'
         uses: jakejarvis/wait-action@master
         with:
