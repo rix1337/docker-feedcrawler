@@ -5,7 +5,8 @@ MAINTAINER rix1337
 RUN apk add --no-cache build-base build-base libc-dev libffi-dev g++ gcc jq python3-dev py3-pip
 
 # dependencies
-RUN pip3 install wheel \
+RUN pip3 install --upgrade pip \
+  && pip3 install wheel \
   && pip3 install \
 beautifulsoup4==4.10.0 \
 cinemagoer==2022.2.11 \
