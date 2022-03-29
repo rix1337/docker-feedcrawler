@@ -1,4 +1,4 @@
-FROM lsiobase/alpine
+FROM docker pull lsiobase/alpine:3.15
 MAINTAINER rix1337
 
 # build tools
