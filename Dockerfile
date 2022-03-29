@@ -1,13 +1,12 @@
-FROM lsiobase/alpine:3.15
+FROM ghcr.io/linuxserver/baseimage-alpine:3.15
 MAINTAINER rix1337
 
 # build tools
-RUN apk add --no-cache build-base jq python3-dev
+RUN apk add --no-cache build-base jq python3-dev py3-pip \
 
 # dependencies
-RUN /usr/bin/python3.6 -m pip install --upgrade pip \
-  && pip install wheel \
-  && pip install \
+RUN pip3 install wheel \
+  && pip3 install \
 beautifulsoup4==4.10.0 \
 cinemagoer==2022.2.11 \
 docopt==0.6.2 \
