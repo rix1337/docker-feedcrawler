@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.python3
+FROM lsiobase/alpine
 MAINTAINER rix1337
 
 # build tools
@@ -7,8 +7,6 @@ RUN apk add --no-cache build-base jq python3-dev
 # dependencies
 RUN /usr/bin/python3.6 -m pip install --upgrade pip \
   && pip install wheel \
-  && wget https://files.pythonhosted.org/packages/3c/ce/5761c7e60b9fdf526ddf461f416e67644147e83a30e8364d231ec62eb81e/waitress-2.1.1-py3-none-any.whl \
-  && pip install waitress-2.1.1-py3-none-any.whl \
   && pip install \
 beautifulsoup4==4.10.0 \
 cinemagoer==2022.2.11 \
@@ -22,7 +20,7 @@ python-dateutil==2.8.2 \
 rapidfuzz==2.0.7 \
 requests==2.27.1 \
 simplejson==3.17.6 \
-# waitress==2.1.1
+waitress==2.1.1
   
 # add local files
 COPY root/ /
