@@ -2,7 +2,7 @@ FROM lsiobase/alpine.python3
 MAINTAINER rix1337
 
 # build tools
-RUN apk add --no-cache build-base libc-dev libffi-dev g++ gcc jq libxslt-dev python3-dev
+RUN apk add --no-cache build-base jq python3-dev
 
 # dependencies
 RUN /usr/bin/python3.6 -m pip install --upgrade pip \
