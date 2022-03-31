@@ -43,6 +43,8 @@ FeedCrawler kann zum durchsuchen beliebiger Webseiten verwendet werden. Ausschli
 Diese Entscheidung trifft der Anwender selbstständig, indem er die _FeedCrawler.ini_ in der Kategorie _[Hostnames]_ manuell befüllt (_ab = xyz.com_).
 Eingetragen werden dort reine Hostnamen (ohne _https://_).
 
+**Die FeedCrawler.ini liegt unter dem `/config`-Volume ab.**
+
 ##### Dabei gilt
 * Welcher Hostname aufgerufen wird entscheidet allein der Anwender.
 * Ist nicht mindestens ein Hostname gesetzt, wird der FeedCrawler nicht starten.
