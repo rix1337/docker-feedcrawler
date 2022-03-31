@@ -1,6 +1,8 @@
-# docker-feedcrawler
+# FeedCrawler
 
-Dies ist das offizielle Docker-Image von FeedCrawler (ehemals RSScrawler).
+<img src="https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web/public/favicon.ico" data-canonical-src="https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web/public/favicon.ico" width="64" height="64" />
+
+Dies ist das offizielle Docker-Image von FeedCrawler.
 
 FeedCrawler automatisiert bequem das Hinzufügen von Links für den JDownloader.
 
