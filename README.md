@@ -30,6 +30,14 @@ docker run -d \
   --log-opt max-size=50m \
   rix1337/docker-feedcrawler
   ```
+  
+# Spezifische Version nutzen
+
+Das Image `rix1377/docker-feedcrawler` wird standardmäßig auf das `:latest`-Tag aufgelöst. Dieses wird mit jedem Release auf die neue Version aktualisiert. Mit jedem Release wird ebenfalls eine getaggte Version des Images erzeugt. Auf letztere kann man wechseln, um beispielsweise bei Fehlern in der neuen Version auf einen funktionierenden Stand zurück zu kehren.
+
+Beispiel:
+
+`docker pull rix1337/docker-feedcrawler:13.0.3`
 
 # Optionale Parameter
  - `-e USER` (ab dem ersten Start, sofern unverändert)
@@ -43,7 +51,7 @@ FeedCrawler kann zum durchsuchen beliebiger Webseiten verwendet werden. Ausschli
 Diese Entscheidung trifft der Anwender selbstständig, indem er die _FeedCrawler.ini_ in der Kategorie _[Hostnames]_ manuell befüllt (_ab = xyz.com_).
 Eingetragen werden dort reine Hostnamen (ohne _https://_).
 
-**Die FeedCrawler.ini liegt unter dem `/config`-Volume ab.**
+**Die _FeedCrawler.ini_ liegt unter dem `/config`-Volume ab.**
 
 ##### Dabei gilt
 * Welcher Hostname aufgerufen wird entscheidet allein der Anwender.
