@@ -6,7 +6,7 @@ Dies ist das offizielle Docker-Image von FeedCrawler.
 
 FeedCrawler automatisiert bequem das Hinzufügen von Links für den JDownloader.
 
-[![PyPI version](https://badge.fury.io/py/feedcrawler.svg)](https://badge.fury.io/py/feedcrawler)
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/rix1337/docker-feedcrawler)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/feedcrawler)](https://github.com/rix1337/FeedCrawler/releases)
 [![Github Sponsorship](https://img.shields.io/badge/support-me-red.svg)](https://github.com/users/rix1337/sponsorship)
 [![Chat aufrufen unter https://gitter.im/FeedCrawler/community](https://badges.gitter.im/FeedCrawler/community.svg)](https://gitter.im/FeedCrawler/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
