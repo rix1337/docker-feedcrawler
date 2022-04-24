@@ -6,19 +6,7 @@ RUN apk add --no-cache build-base jq python3-dev py3-pip
 
 # dependencies
 RUN pip3 install --upgrade pip \
-  && pip3 install wheel \
-  && pip3 install \
-beautifulsoup4==4.10.0 \
-cinemagoer==2022.2.11 \
-docopt==0.6.2 \
-flask==2.1.1 \
-html5lib==1.1 \
-passlib==1.7.4 \
-pycryptodomex==3.14.1 \
-python-dateutil==2.8.2 \
-requests==2.27.1 \
-simplejson==3.17.6 \
-waitress==2.1.1
+  && pip3 install wheel
   
 # add local files
 COPY root/ /
