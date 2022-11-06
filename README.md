@@ -1,6 +1,6 @@
 # FeedCrawler
 
-<img src="https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web/public/favicon.ico" data-canonical-src="https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web/public/favicon.ico" width="64" height="64" />
+<img src="https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web_interface/vuejs_frontend/public/favicon.ico" data-canonical-src="https://raw.githubusercontent.com/rix1337/FeedCrawler/master/feedcrawler/web_interface/vuejs_frontend/public/favicon.ico" width="64" height="64" />
 
 Dies ist das offizielle Docker-Image von FeedCrawler.
 
