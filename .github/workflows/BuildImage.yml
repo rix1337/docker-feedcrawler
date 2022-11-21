@@ -35,7 +35,7 @@ jobs:
     needs: version-check
     steps:
       - uses: actions/checkout@v3
-      - uses: whoan/docker-build-with-cache-action@v5
+      - uses: whoan/docker-build-with-cache-action@v6
         id: firstrun
         continue-on-error: true
         with:
@@ -50,7 +50,7 @@ jobs:
         uses: jakejarvis/wait-action@master
         with:
           time: '1m'
-      - uses: whoan/docker-build-with-cache-action@v5
+      - uses: whoan/docker-build-with-cache-action@v6
         if: steps.firstrun.outcome=='failure'
         with:
           username: "${{ secrets.DOCKERUSER }}"
