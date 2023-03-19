@@ -21,6 +21,7 @@ ENV PASS=""
 ENV DEVICE=""
 ENV LOGLEVEL=""
 ENV VERSION=""
+ENV DELAY=""
 
 # Optionally set desired version for the build
 ARG VS="false"
