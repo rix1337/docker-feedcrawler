@@ -27,6 +27,7 @@ docker run -d \
   -e USER=NUTZERNAME \ 
   -e PASS=PASSWORT \
   -e DEVICE=GERÄTENAME \
+  -e DELAY=30 \
   -e LOGLEVEL=[INFO/DEBUG/WARNING/ERROR/CRITICAL/NOTSET] \
   --log-opt max-size=50m \
   rix1337/docker-feedcrawler
@@ -44,7 +45,7 @@ Beispiel:
  - `-e USER` (ab dem ersten Start, sofern unverändert)
  - `-e PASS` (ab dem ersten Start, sofern unverändert)
  - `-e DEVICE` (immer, sofern nur ein Gerät im MyJD-Konto vorhanden ist, sonst ab dem ersten Start, sofern unverändert)
- - `-e LOGLEVEL` (immer)
+ - `-e DELAY` (immer, sofern der erste Suchlauf nach Start nicht um diese ganze Zahl in Sekunden verzögert werden soll)
  
 # Hostnamen festlegen
 
