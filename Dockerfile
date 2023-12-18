@@ -16,6 +16,7 @@ VOLUME /config
 EXPOSE 9090
 
 # Set environment variables.
+ENV PYTHONUNBUFFERED=1
 ENV USER=""
 ENV PASS=""
 ENV DEVICE=""
